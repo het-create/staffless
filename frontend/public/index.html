@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>STAFFLESS — the agency with nobody in it</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">S▍</span>
+    <span class="brand-name">STAFFLESS</span>
+  </div>
+  <span class="tagline">the agency with nobody in it</span>
+</header>
+
+<main>
+  <section class="intake" id="intake">
+    <h1>Send a brief. The floor takes it from there.</h1>
+    <p class="subhead">No account managers. No standups. Six agents pick up your brief, split the work, and ship a campaign package — live, in front of you.</p>
+
+    <form id="brief-form">
+      <div class="field">
+        <label for="product">Product / company</label>
+        <input id="product" name="product" placeholder="e.g. Kavo — cold-brew concentrate in reusable pouches" required />
+      </div>
+      <div class="field">
+        <label for="audience">Target audience</label>
+        <input id="audience" name="audience" placeholder="e.g. Urban 20s-30s, sustainability-minded, gym-goers" required />
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="goal">Primary goal</label>
+          <input id="goal" name="goal" placeholder="e.g. Drive first-time trial via D2C site" required />
+        </div>
+        <div class="field">
+          <label for="platforms">Platforms</label>
+          <input id="platforms" name="platforms" placeholder="e.g. Instagram, TikTok, Google Search" required />
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="tone">Tone</label>
+          <input id="tone" name="tone" placeholder="e.g. Punchy, a little irreverent" />
+        </div>
+        <div class="field">
+          <label for="budget">Budget note</label>
+          <input id="budget" name="budget" placeholder="e.g. Lean — organic-first, small paid test" />
+        </div>
+      </div>
+      <button type="submit" id="submit-btn">Send brief to the floor</button>
+    </form>
+  </section>
+
+  <section class="floor" id="floor" hidden>
+    <h2 class="floor-title">Ops floor <span id="run-state">— idle</span></h2>
+    <div class="desks" id="desks"></div>
+
+    <div class="feed-wrap">
+      <div class="feed-label">Live feed</div>
+      <div class="feed" id="feed"></div>
+    </div>
+
+    <div class="deliverable" id="deliverable" hidden>
+      <div class="deliverable-label">Final campaign package</div>
+      <pre id="deliverable-content"></pre>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Built for India's First Public Agentic AI Hackathon — Human-Less Company</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
